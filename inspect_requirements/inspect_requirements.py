@@ -128,7 +128,9 @@ def get_summary(wd, data):
 
         value['lines'] = [f'{req_name}, {len(different_versions)} different versions']
         for dets in details:
-            value['lines'].append(f'  * {dets["req_file"].split(wd)[1][1:]} {dets["req"].specs}')
+            specs = [''.join(specs) for specs in dets['req'].specs]
+            specs = ', '.join(f'"{s}"' for s in specs)
+            value['lines'].append(f'  * {dets["req_file"].split(wd)[1][1:]}: {specs}')
 
         ret[req_name] = value
 
