@@ -130,8 +130,6 @@ def get_summary(wd, data):
         for dets in details:
             value['lines'].append(f'  * {dets["req_file"].split(wd)[1][1:]} {dets["req"].specs}')
 
-        for d in details:
-            print(d['req'].__dict__)
         ret[req_name] = value
 
     return ret
