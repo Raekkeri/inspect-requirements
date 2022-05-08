@@ -8,7 +8,7 @@ requirements = (
     'setuptools',
 )
 
-VERSION = '0.10.4'
+VERSION = '0.10.5'
 
 setup(
     name='inspect-requirements',
