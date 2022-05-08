@@ -8,10 +8,12 @@ requirements = (
     'setuptools',
 )
 
+VERSION = '0.10.3'
+
 setup(
     name='inspect-requirements',
     zip_safe=False,
-    version='0.10.3',
+    version=VERSION,
     description='Inspect requirements.txt files of multiple repositories.',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -20,7 +22,7 @@ setup(
     author='Teemu Husso',
     author_email='teemu.husso@gmail.com',
     url='https://github.com/Raekkeri/inspect-requirements',
-    download_url='https://github.com/raekkeri/inspect-requirements/tarball/0.10.3',
+    download_url=f'https://github.com/raekkeri/inspect-requirements/tarball/{VERSION}',
     packages=find_packages(exclude=['tests']),
     install_requires=requirements,
     entry_points={
